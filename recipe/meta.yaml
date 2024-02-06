@@ -1,5 +1,5 @@
 {% set name = "conda-sphinx-theme" %}
-{% set version = "0.1.3" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/conda_sphinx_theme-{{ version }}.tar.gz
-  sha256: 4a326536b2c9553148aacea15a5bdd3a28c59e0822b4eab842f668b9d0c56a00
+  sha256: 55a5935d9215fdaee2b9c115e815ef620aa40eeca4473ba6ce20bb347b01cbcd
 
 build:
   noarch: python
