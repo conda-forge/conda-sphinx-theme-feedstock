@@ -7,23 +7,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/conda_sphinx_theme-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/conda_sphinx_theme-{{ version }}.tar.gz
   sha256: 3ba3993914b27c7ff899434f06e3a0214395750f2864c4b483ff46656baea00f
 
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools >=61.0
   run:
     - pydata-sphinx-theme >=0.13.1,<0.16.0
-    - python >=3.7
+    - python >={{ python_min }}
     - sphinx-favicon
 
 test:
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/conda-sphinx-theme
