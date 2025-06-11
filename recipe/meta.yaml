@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/conda_sphinx_theme-{{ version }}.tar.gz
-  sha256: a6e691c006e1582df9377e87386eab5e585caa4dafd437a382ba7f1385c56b1f
+  sha256: 0ac34dca0a5114f66c10152be428ec6ceec9f51b52c98f6f6aaab7fb76c4308e
 
 build:
   noarch: python
