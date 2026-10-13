@@ -1,18 +1,18 @@
 {% set name = "conda-sphinx-theme" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/conda_sphinx_theme-{{ version }}.tar.gz
-  sha256: 18548d0c9912c45775d0a6e0ef7f0246c601cc71a576fbb5c7296566c7c03db5
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/conda_sphinx_theme-{{ version }}.tar.gz
+  sha256: 31e34a5e9a4e0d035c409806a9272a11792b449db48a77956136bbc55bfa6b8f
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
